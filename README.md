@@ -14,7 +14,7 @@ Build For tomcat:
     2. cp build/libs/SpringMvcSecurityThymeleafGeneral.war /path/to/tomcat/webapps
     3. /path/to/tomcat/bin/start.sh (Linux) or /path/to/tomcat/bin/start.bat (Windows)
     4. access URL: localhost:8080/SpringMvcSecurityThymeleafGeneral (8080 is default port of Tomcat)
-
+    
 Join!
 
 
