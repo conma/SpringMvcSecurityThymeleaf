@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>User page</title>
+</head>
+<body>
+    <h1>User page</h1>
+    <a th:href="@{/admin}">Admin page</a><br>
+    <form th:action="@{/logout}" method="POST">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+        <input type="submit" value="Logout" />
+    </form>
+</body>
+</html>

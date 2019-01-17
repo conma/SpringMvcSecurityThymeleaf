@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="static/css/bootstrap.min.css" th:href="@{static/css/bootstrap.min.css}" rel="stylesheet" id="bootstrap-css">
+    <link href="static/css/login.css" th:href="@{static/css/login.css}" rel="stylesheet" id="login-css">
+</head>
+<body id="LoginForm">
+    <div class="container">
+        <div class="login-form">
+            <div class="main-div">
+                <div class="panel">
+                    <h2>Login</h2>
+                </div>
+                <form id="login" th:action="@{/login}" method="POST">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Email or Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                    </div>
+                    <div class="forgot">
+                        <a href="/forgot" th:href="@{/forgot}">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
